@@ -50,9 +50,10 @@ const _default = {
   },
   async discover(params?: IDiscoverParams): Promise<IPrinter[]> {
     if (
-      Platform.OS === 'ios' ||
-      ((await requestAndroidPermissions()) &&
-        (await enableLocationAccessAndroid10()))
+      1
+      // Platform.OS === 'ios' ||
+      // ((await requestAndroidPermissions()) &&
+      //   (await enableLocationAccessAndroid10()))
     ) {
       return new Promise((res, rej) => {
         let listener: EmitterSubscription | null;
